@@ -1,0 +1,116 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="ht__bradcaump__area bg-image--4" style="background-image:url('https://truonggiang.vn/wp-content/uploads/2022/09/banner-laptop-sinh-vien-2048x943-1.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcaump__inner text-center">
+                    <h2 class="bradcaump-title">Checkout</h2>
+                    <nav class="bradcaump-content">
+                        <a class="breadcrumb_item" href="@Url.Action("Index","Home")">Trang chủ</a>
+                        <span class="brd-separetor">/</span>
+                        <span class="breadcrumb_item active">Checkout</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- Start Checkout Area -->
+<section class="wn__checkout__area section-padding--lg bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <form action="@Url.Action("CreateAcc","GioHangs")" method="post">
+                    <div class="customer_details">
+                        <h3>Thông tin khách hàng</h3>
+                        <div class="customar__field">
+                            <div class="input_box">
+                                <label> Tên khách hàng <span>*</span></label>
+                                <input type="hidden" value="" name="makh" required />
+                                <input type="text" value="" name="tenkh" required>
+                            </div>
+                            <div class="input_box">
+                                <label>Địa chỉ <span>*</span></label>
+                                <input type="text" placeholder="Địa chỉ" value="" id="diachi" name="diachi" required>
+                            </div>
+                            <div class="margin_between">
+                                <div class="input_box space_between">
+                                    <label>Số điện thoại <span>*</span></label>
+                                    <input type="text" value="" name="SoDienThoai" required>
+                                </div>
+
+                                <div class="input_box space_between">
+                                    <label>Email  <span>*</span></label>
+                                    <input type="email" value="" name="email" required>
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <label>Mật khẩu<span>*</span></label>
+                                <input type="password" placeholder="Mật khẩu" value="" name="password" required>
+                            </div>
+                            <div class="input_box">
+                                <label>Giao tới địa chỉ khác <span>*</span></label>
+                                <input type="text" placeholder="Địa chỉ khác" value="" name="diachigiaohang" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create__account d-flex">
+                        <input class="input-checkbox btn btn-primary" style="width:100%;" value="Đặt hàng" type="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 col-12 md-mt-40 sm-mt-40">
+                <div class="wn__order__box">
+                    <h3 class="onder__title">Đơn hàng của bạn</h3>
+                    <ul class="order__total">
+                        <li>Sản phẩm</li>
+                        <li>Tổng</li>
+                    </ul>
+                    <ul class="order_product">
+                        @foreach (var item in Model)
+                        {
+                            decimal gia = (decimal)item.sp.Gia;
+                            <li>@item.sp.Ten × @item.Soluong<span>@gia.ToString("##,#")</span></li>
+                        }
+                    </ul>
+                    <ul class="total__amount">
+                        @{ decimal tien = 0;}
+                        @foreach (var item in Model)
+                        {
+                            decimal tongtien = item.Soluong * (decimal)item.sp.Gia;
+                            tien = tien + tongtien;
+                        }
+                        <li>Tổng thanh toán <span>@tien.ToString("##,#")</span></li>
+                    </ul>
+                </div>
+                <div id="accordion" class="checkout_accordion mt--30" role="tablist">
+                    <div class="payment">
+                        <div class="che__header" role="tab" id="headingOne">
+                            <a class="checkout__title" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <span>Thanh toán qua ngân hàng</span>
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="payment-body">Chức năng này đang Cập nhật</div>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <div class="che__header" role="tab" id="headingTwo">
+                            <a class="collapsed checkout__title" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <span>Thanh toán qua paymen</span>
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="payment-body">Chức năng này đang Cập nhật</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

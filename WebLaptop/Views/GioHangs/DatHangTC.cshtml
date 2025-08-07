@@ -1,0 +1,84 @@
+﻿@model IEnumerable<WebLaptop.Models.ChiTietDonHang>
+@using WebLaptop.Models;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var dh = (DonHang)Session["TTDonHang"];
+
+}
+
+
+<div class="ht__bradcaump__area bg-image--4" style="background-image:url('https://truonggiang.vn/wp-content/uploads/2022/09/banner-laptop-sinh-vien-2048x943-1.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcaump__inner text-center">
+                    <h2 class="bradcaump-title">Checkout</h2>
+                    <nav class="bradcaump-content">
+                        <a class="breadcrumb_item" href="index.html">Home</a>
+                        <span class="brd-separetor">/</span>
+                        <span class="breadcrumb_item active">Checkout</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="wn__checkout__area section-padding--lg bg__white">
+    <div class="container">
+        <div class="row">
+            @{ DonHang kh = (DonHang)Session["TTDonHang"]; }
+            <div class="col-lg-12 col-12 md-mt-40 sm-mt-40">
+                <div class="wn__order__box">
+                    <h3 class="onder__title">Đơn hàng của bạn</h3>
+                    <ul class="order__total">
+                        <li>Sản phẩm</li>
+                        <li>Tổng</li>
+                    </ul>
+                    <ul class="order_product">
+                        @foreach (var item in Model)
+                        {
+                            decimal tongia = (decimal)item.SoLuong * (decimal)item.SanPham.Gia;
+                            <li>@item.SanPham.Ten × @item.SoLuong<span>@tongia.ToString("##,#")</span></li>
+                        }
+                    </ul>
+                    <ul class="order__total">
+                        <li>Tên khách hàng</li>
+                        <li>@dh.TenNguoiNhan</li>
+                    </ul>
+                    <ul class="order__total">
+                        <li>Địa chỉ</li>
+                        <li>@dh.DiaChi</li>
+                    </ul>
+                    <ul class="order__total">
+                        <li>Số điện thoại</li>
+                        <li>@dh.DienThoai</li>
+                    </ul>
+
+                    <ul class="order__total">
+                        <li>Email</li>
+                        <li>@dh.Email</li>
+                    </ul>
+                    <ul class="order__total">
+                        <li>Ngày đặt hàng</li>
+                        <li>@dh.NgayDatHang</li>
+                    </ul>
+                    <ul class="order__total">
+                        <li>Phương thức thanh toán</li>
+                        <li>@dh.PTTT</li>
+                    </ul>
+
+                    <ul class="total__amount">
+                        @{ decimal tien = 0;}
+                        @foreach (var item in Model)
+                        {
+                            decimal tongtien = (decimal)item.SoLuong * (decimal)item.SanPham.Gia;
+                            tien = tien + tongtien;
+                        }
+                        <li>Tổng thanh toán <span>@tien.ToString("##,#")</span></li>
+                    </ul>
+                </div>
+                <a href="@Url.Action("Index","Home")" style="width:100%;" class="btn btn-primary mt--100">Quay lại</a>
+            </div>
+        </div>
+    </div>
+</section>

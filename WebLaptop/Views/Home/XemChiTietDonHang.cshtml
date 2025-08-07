@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WebLaptop.Models.ChiTietDonHang>
+@{
+    ViewBag.Title = "XemChiTietDonHang";
+}
+
+<div class="ht__bradcaump__area bg-image--4" style="background-image:url('https://truonggiang.vn/wp-content/uploads/2022/09/banner-laptop-sinh-vien-2048x943-1.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcaump__inner text-center">
+                    <h2 class="bradcaump-title">Danh sách đơn hàng</h2>
+                    <nav class="bradcaump-content">
+                        <a class="breadcrumb_item" href="@Url.Action("Index","Home")">Trang chủ</a>
+                        <span class="brd-separetor">/</span>
+                        <span class="breadcrumb_item active">Danh sách đơn hàng</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- Start Checkout Area -->
+<section class="wn__checkout__area section-padding--lg bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="table-content wnro__table table-responsive">
+                    <table>
+                        <thead>
+                            <tr class="title-top">
+                                <th class="product-thumbnail" height="150px" width="250px">Hình ảnh</th>
+                                <th class="product-name">Tên sản phẩm</th>
+                                <th class="product-price">Giá</th>
+                                <th class="product-quantity">Thương hiệu</th>
+                                <th class="product-subtotal">Nhà sản xuất</th>
+                                <th class="product-remove">Số lượng</th>
+                                <th class="product-remove">Tổng</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td class="product-thumbnail"><img src="@item.SanPham.Anh" height="150px" width="250px" /></td>
+                                <td class="product-name">@item.SanPham.Ten</td>
+                                @{ decimal dongia = (decimal)item.DonGia; ;}
+                                <td class="product-price">@dongia.ToString("##,#")</td>
+                                <td class="product-quantity">@item.SanPham.ThuongHieu</td>
+                                <td class="product-quantity">@item.SanPham.NhaSanXuat</td>
+                                <td class="product-quantity">@item.SoLuong</td>
+                                @{ decimal tien = (decimal)item.SoLuong * (decimal)item.DonGia; ;}
+                                <td class="product-quantity">@tien.ToString("##,#")</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+

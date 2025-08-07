@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLySachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CauHinh">
+    <Key>
+      <PropertyRef Name="Ma" />
+    </Key>
+    <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Logo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CongTy" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Banner1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Banner2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Banner3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Banner4" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ChiTietDonHang">
+    <Key>
+      <PropertyRef Name="MaDH" />
+      <PropertyRef Name="MaSP" />
+    </Key>
+    <Property Name="MaDH" Type="Int32" Nullable="false" />
+    <Property Name="MaSP" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" />
+    <Property Name="DonGia" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="DonHang" Relationship="QuanLySachModel.FK_ChiTietDonHang_DonHang" FromRole="ChiTietDonHang" ToRole="DonHang" />
+    <NavigationProperty Name="SanPham" Relationship="QuanLySachModel.FK_ChiTietDonHang_SanPham" FromRole="ChiTietDonHang" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ChuyenMuc">
+    <Key>
+      <PropertyRef Name="Ma" />
+    </Key>
+    <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Mota" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TinTucs" Relationship="QuanLySachModel.FK_TinTuc_ChuyenMuc" FromRole="ChuyenMuc" ToRole="TinTuc" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="Ma" />
+    </Key>
+    <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DonHangs" Relationship="QuanLySachModel.FK_DonHang_KhachHang" FromRole="KhachHang" ToRole="DonHang" />
+  </EntityType>
+  <EntityType Name="LoaiSP">
+    <Key>
+      <PropertyRef Name="Ma" />
+    </Key>
+    <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPhams" Relationship="QuanLySachModel.FK_SanPham_LoaiSP" FromRole="LoaiSP" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="NguoiDung">
+    <Key>
+      <PropertyRef Name="Ma" />
+    </Key>
+    <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="GioiTinh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TenDangNhap" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Anh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Quyen" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="QuanLySachEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CauHinhs" EntityType="Self.CauHinh" />
+    <EntitySet Name="ChiTietDonHangs" EntityType="Self.ChiTietDonHang" />
+    <EntitySet Name="ChuyenMucs" EntityType="Self.ChuyenMuc" />
+    <EntitySet Name="KhachHangs" EntityType="Self.KhachHang" />
+    <EntitySet Name="LoaiSPs" EntityType="Self.LoaiSP" />
+    <EntitySet Name="NguoiDungs" EntityType="Self.NguoiDung" />
+    <EntitySet Name="DonHangs" EntityType="QuanLySachModel.DonHang" />
+    <AssociationSet Name="FK_ChiTietDonHang_DonHang" Association="QuanLySachModel.FK_ChiTietDonHang_DonHang">
+      <End Role="DonHang" EntitySet="DonHangs" />
+      <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DonHang_KhachHang" Association="QuanLySachModel.FK_DonHang_KhachHang">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="DonHang" EntitySet="DonHangs" />
+    </AssociationSet>
+    <EntitySet Name="TinTucs" EntityType="QuanLySachModel.TinTuc" />
+    <AssociationSet Name="FK_TinTuc_ChuyenMuc" Association="QuanLySachModel.FK_TinTuc_ChuyenMuc">
+      <End Role="ChuyenMuc" EntitySet="ChuyenMucs" />
+      <End Role="TinTuc" EntitySet="TinTucs" />
+    </AssociationSet>
+    <EntitySet Name="SanPhams" EntityType="QuanLySachModel.SanPham" />
+    <AssociationSet Name="FK_ChiTietDonHang_SanPham" Association="QuanLySachModel.FK_ChiTietDonHang_SanPham">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTietDonHang" EntitySet="ChiTietDonHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_LoaiSP" Association="QuanLySachModel.FK_SanPham_LoaiSP">
+      <End Role="LoaiSP" EntitySet="LoaiSPs" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+    <EntitySet Name="PhieuNhaps" EntityType="QuanLySachModel.PhieuNhap" />
+    <EntitySet Name="PhieuNhapChiTiets" EntityType="QuanLySachModel.PhieuNhapChiTiet" />
+    <EntitySet Name="PhieuXuats" EntityType="QuanLySachModel.PhieuXuat" />
+    <EntitySet Name="PhieuXuatChiTiets" EntityType="QuanLySachModel.PhieuXuatChiTiet" />
+    <AssociationSet Name="FK__PhieuNhap__Phieu__4F7CD00D" Association="QuanLySachModel.FK__PhieuNhap__Phieu__4F7CD00D">
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+      <End Role="PhieuNhapChiTiet" EntitySet="PhieuNhapChiTiets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuNhap__SanPh__5070F446" Association="QuanLySachModel.FK__PhieuNhap__SanPh__5070F446">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="PhieuNhapChiTiet" EntitySet="PhieuNhapChiTiets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuXuat__Phieu__5535A963" Association="QuanLySachModel.FK__PhieuXuat__Phieu__5535A963">
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+      <End Role="PhieuXuatChiTiet" EntitySet="PhieuXuatChiTiets" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PhieuXuat__SanPh__5629CD9C" Association="QuanLySachModel.FK__PhieuXuat__SanPh__5629CD9C">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="PhieuXuatChiTiet" EntitySet="PhieuXuatChiTiets" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DonHang">
+    <Key>
+      <PropertyRef Name="Ma" />
+    </Key>
+    <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+    <Property Name="NgayDatHang" Type="DateTime" Precision="0" />
+    <Property Name="PhiGiao" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TenNguoiNhan" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DienThoai" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Boolean" />
+    <NavigationProperty Name="ChiTietDonHangs" Relationship="QuanLySachModel.FK_ChiTietDonHang_DonHang" FromRole="DonHang" ToRole="ChiTietDonHang" />
+    <NavigationProperty Name="KhachHang" Relationship="QuanLySachModel.FK_DonHang_KhachHang" FromRole="DonHang" ToRole="KhachHang" />
+  </EntityType>
+  <Association Name="FK_ChiTietDonHang_DonHang">
+    <End Type="QuanLySachModel.DonHang" Role="DonHang" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="QuanLySachModel.ChiTietDonHang" Role="ChiTietDonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonHang">
+        <PropertyRef Name="Ma" />
+      </Principal>
+      <Dependent Role="ChiTietDonHang">
+        <PropertyRef Name="MaDH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DonHang_KhachHang">
+    <End Type="QuanLySachModel.KhachHang" Role="KhachHang" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="QuanLySachModel.DonHang" Role="DonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="Ma" />
+      </Principal>
+      <Dependent Role="DonHang">
+        <PropertyRef Name="MaKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TinTuc">
+    <Key>
+      <PropertyRef Name="Ma" />
+    </Key>
+    <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TieuDe" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MoTaNgan" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Anh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MaCM" Type="Int32" Nullable="false" />
+    <Property Name="NgayDang" Type="DateTime" Precision="0" />
+    <Property Name="TacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChuyenMuc" Relationship="QuanLySachModel.FK_TinTuc_ChuyenMuc" FromRole="TinTuc" ToRole="ChuyenMuc" />
+  </EntityType>
+  <Association Name="FK_TinTuc_ChuyenMuc">
+    <End Type="QuanLySachModel.ChuyenMuc" Role="ChuyenMuc" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="QuanLySachModel.TinTuc" Role="TinTuc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChuyenMuc">
+        <PropertyRef Name="Ma" />
+      </Principal>
+      <Dependent Role="TinTuc">
+        <PropertyRef Name="MaCM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="Ma" />
+    </Key>
+    <Property Name="Ma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Mota" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MaLoai" Type="Int32" Nullable="false" />
+    <Property Name="Anh" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Chitiet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TieuBieu" Type="Int32" />
+    <Property Name="Gia" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NhaXuatBan" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="NamXB" Type="DateTime" Precision="0" />
+    <Property Name="GiamGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChiTietDonHangs" Relationship="QuanLySachModel.FK_ChiTietDonHang_SanPham" FromRole="SanPham" ToRole="ChiTietDonHang" />
+    <NavigationProperty Name="LoaiSP" Relationship="QuanLySachModel.FK_SanPham_LoaiSP" FromRole="SanPham" ToRole="LoaiSP" />
+    <NavigationProperty Name="PhieuNhapChiTiets" Relationship="QuanLySachModel.FK__PhieuNhap__SanPh__5070F446" FromRole="SanPham" ToRole="PhieuNhapChiTiet" />
+    <NavigationProperty Name="PhieuXuatChiTiets" Relationship="QuanLySachModel.FK__PhieuXuat__SanPh__5629CD9C" FromRole="SanPham" ToRole="PhieuXuatChiTiet" />
+    <Property Name="SoLuongTon" Type="Int64" />
+  </EntityType>
+  <Association Name="FK_ChiTietDonHang_SanPham">
+    <End Type="QuanLySachModel.SanPham" Role="SanPham" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="QuanLySachModel.ChiTietDonHang" Role="ChiTietDonHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="Ma" />
+      </Principal>
+      <Dependent Role="ChiTietDonHang">
+        <PropertyRef Name="MaSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_LoaiSP">
+    <End Type="QuanLySachModel.LoaiSP" Role="LoaiSP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="QuanLySachModel.SanPham" Role="SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiSP">
+        <PropertyRef Name="Ma" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="MaLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PhieuNhap">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayNhap" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NhaCungCap" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TongTien" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="PhieuNhapChiTiets" Relationship="QuanLySachModel.FK__PhieuNhap__Phieu__4F7CD00D" FromRole="PhieuNhap" ToRole="PhieuNhapChiTiet" />
+  </EntityType>
+  <EntityType Name="PhieuNhapChiTiet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PhieuNhapId" Type="Int32" Nullable="false" />
+    <Property Name="SanPhamId" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="GiaNhap" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="PhieuNhap" Relationship="QuanLySachModel.FK__PhieuNhap__Phieu__4F7CD00D" FromRole="PhieuNhapChiTiet" ToRole="PhieuNhap" />
+    <NavigationProperty Name="SanPham" Relationship="QuanLySachModel.FK__PhieuNhap__SanPh__5070F446" FromRole="PhieuNhapChiTiet" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="PhieuXuat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayXuat" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="KhachHang" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TongTien" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="PhieuXuatChiTiets" Relationship="QuanLySachModel.FK__PhieuXuat__Phieu__5535A963" FromRole="PhieuXuat" ToRole="PhieuXuatChiTiet" />
+  </EntityType>
+  <EntityType Name="PhieuXuatChiTiet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PhieuXuatId" Type="Int32" Nullable="false" />
+    <Property Name="SanPhamId" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="GiaXuat" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="PhieuXuat" Relationship="QuanLySachModel.FK__PhieuXuat__Phieu__5535A963" FromRole="PhieuXuatChiTiet" ToRole="PhieuXuat" />
+    <NavigationProperty Name="SanPham" Relationship="QuanLySachModel.FK__PhieuXuat__SanPh__5629CD9C" FromRole="PhieuXuatChiTiet" ToRole="SanPham" />
+  </EntityType>
+  <Association Name="FK__PhieuNhap__Phieu__4F7CD00D">
+    <End Type="QuanLySachModel.PhieuNhap" Role="PhieuNhap" Multiplicity="1" />
+    <End Type="QuanLySachModel.PhieuNhapChiTiet" Role="PhieuNhapChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuNhap">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PhieuNhapChiTiet">
+        <PropertyRef Name="PhieuNhapId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuNhap__SanPh__5070F446">
+    <End Type="QuanLySachModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="QuanLySachModel.PhieuNhapChiTiet" Role="PhieuNhapChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="Ma" />
+      </Principal>
+      <Dependent Role="PhieuNhapChiTiet">
+        <PropertyRef Name="SanPhamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuXuat__Phieu__5535A963">
+    <End Type="QuanLySachModel.PhieuXuat" Role="PhieuXuat" Multiplicity="1" />
+    <End Type="QuanLySachModel.PhieuXuatChiTiet" Role="PhieuXuatChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuXuat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PhieuXuatChiTiet">
+        <PropertyRef Name="PhieuXuatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PhieuXuat__SanPh__5629CD9C">
+    <End Type="QuanLySachModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="QuanLySachModel.PhieuXuatChiTiet" Role="PhieuXuatChiTiet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="Ma" />
+      </Principal>
+      <Dependent Role="PhieuXuatChiTiet">
+        <PropertyRef Name="SanPhamId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

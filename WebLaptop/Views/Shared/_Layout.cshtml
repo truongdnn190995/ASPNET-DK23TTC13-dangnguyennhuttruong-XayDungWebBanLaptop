@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ClothesShop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="https://png.pngtree.com/template/20200627/ourmid/pngtree-cloth-handcraft-logo-design-vector-image_386721.jpg">
+    <link rel="apple-touch-icon" href="../Assets/images/icon.png">
+
+    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Assets/css/plugins.css">
+    <link rel="stylesheet" href="../Assets/style.css">
+    <!-- Cusom css -->
+    <link rel="stylesheet" href="../Assets/css/custom.css">
+
+    <!-- Modernizer js -->
+    <script src="../Assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!--PagedList-->
+    <link rel="stylesheet" href="/Content/PagedList.css" type="text/css" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/Assets/main/main.css" />
+</head>
+<body>
+
+    <header id="wn__header" class="header__area header__absolute sticky__header">
+        @Html.Action("Header", "Home")
+    </header>
+    <div class="brown--color box-search-content search_active block-bg close__top">
+        <form id="search_mini_form" class="minisearch" action="@Url.Action("Shop","Shop")" method="get">
+            <div class="field__search">
+                <input type="text" placeholder="Tìm kiếm..." name="tensp">
+                <div class="action">
+                    <a  onclick="document.getElementById('search_mini_form').submit()" ><i class="zmdi zmdi-search"></i></a>
+                </div>
+            </div>
+        </form>
+        <div class="close__wrap">
+            <span>close</span>
+        </div>
+    </div>
+    @RenderBody()
+    <footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+        @Html.Action("Footer", "Home")
+    </footer>
+    <script src="../Assets/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="../Assets/js/popper.min.js"></script>
+    <script src="../Assets/js/bootstrap.min.js"></script>
+    <script src="../Assets/js/plugins.js"></script>
+    <script src="../Assets/js/active.js"></script>
+</body>
+</html>

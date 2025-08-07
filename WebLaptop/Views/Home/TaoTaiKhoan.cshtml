@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "TaoTaiKhoan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="ht__bradcaump__area bg-image--4" style="background-image:url('https://truonggiang.vn/wp-content/uploads/2022/09/banner-laptop-sinh-vien-2048x943-1.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcaump__inner text-center">
+                    <h2 class="bradcaump-title">Checkout</h2>
+                    <nav class="bradcaump-content">
+                        <a class="breadcrumb_item" href="@Url.Action("Index","Home")">Trang chủ</a>
+                        <span class="brd-separetor">/</span>
+                        <span class="breadcrumb_item active">Checkout</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- Start Checkout Area -->
+<section class="wn__checkout__area section-padding--lg bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                @if (ViewBag.mes != null) { <div class="alert alert-success"  role="alert">@ViewBag.mes</div> }
+                <form action="@Url.Action("TaoTaiKhoan","Home")" method="post">
+                    <div class="customer_details">
+                        <h3>Thông tin khách hàng</h3>
+                        <div class="customar__field">
+                            <div class="input_box">
+                                <label> Tên khách hàng <span>*</span></label>
+                                <input type="hidden" value="" name="makh" required />
+                                <input type="text" value="" name="tenkh" required>
+                            </div>
+                            <div class="input_box">
+                                <label>Địa chỉ <span>*</span></label>
+                                <input type="text" placeholder="Địa chỉ" value="" id="diachi" name="diachi" required>
+                            </div>
+                            <div class="margin_between">
+                                <div class="input_box space_between">
+                                    <label>Số điện thoại <span>*</span></label>
+                                    <input type="text" value="" name="SoDienThoai" required>
+                                </div>
+
+                                <div class="input_box space_between">
+                                    <label>Email  <span>*</span></label>
+                                    <input type="email" value="" name="email" required>
+                                </div>
+                                <div class="input_box space_between">
+                                    <label>Password  <span>*</span></label>
+                                    <input type="password" value="" name="password" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create__account d-flex">
+                        <input class="input-checkbox btn btn-primary" style="width:100%;" value="Tạo tài khoản" type="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+

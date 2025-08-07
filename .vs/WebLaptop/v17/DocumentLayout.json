@@ -1,0 +1,212 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|e:\\quanlybansach\\quanlybansach\\quanlysach\\lap\\banquanao\\weblaptop\\weblaptop\\views\\home\\banner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|solutionrelative:weblaptop\\views\\home\\banner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\models\\banquanao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\models\\banquanao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\views\\home\\banner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\views\\home\\banner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\views\\shared\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\views\\shared\\header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\models\\banquanao.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\models\\banquanao.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\models\\weblaptop.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\models\\weblaptop.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\models\\banquanao.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\models\\banquanao.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\models\\weblaptop.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\models\\weblaptop.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\views\\giohangs\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\views\\giohangs\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop.csproj|solutionrelative:weblaptop\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Banner.cshtml",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Home\\Banner.cshtml",
+              "RelativeDocumentMoniker": "WebLaptop\\Views\\Home\\Banner.cshtml",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Home\\Banner.cshtml",
+              "RelativeToolTip": "WebLaptop\\Views\\Home\\Banner.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-07T09:27:00.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Banner.cshtml",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Home\\Banner.cshtml",
+              "RelativeDocumentMoniker": "WebLaptop\\Views\\Home\\Banner.cshtml",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Home\\Banner.cshtml",
+              "RelativeToolTip": "WebLaptop\\Views\\Home\\Banner.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-15T15:13:35.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CheckOut.cshtml",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\GioHangs\\CheckOut.cshtml",
+              "RelativeDocumentMoniker": "WebLaptop\\Views\\GioHangs\\CheckOut.cshtml",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\GioHangs\\CheckOut.cshtml",
+              "RelativeToolTip": "WebLaptop\\Views\\GioHangs\\CheckOut.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-15T15:11:52.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebLaptop\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebLaptop\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAMwB8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-15T15:11:28.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Header.cshtml",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Shared\\Header.cshtml",
+              "RelativeDocumentMoniker": "WebLaptop\\Views\\Shared\\Header.cshtml",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Shared\\Header.cshtml",
+              "RelativeToolTip": "WebLaptop\\Views\\Shared\\Header.cshtml",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAMwHQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-15T15:11:17.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DonHang.cs",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\DonHang.cs",
+              "RelativeDocumentMoniker": "WebLaptop\\Models\\DonHang.cs",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\DonHang.cs",
+              "RelativeToolTip": "WebLaptop\\Models\\DonHang.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T15:10:00.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BanQuanAo.cs",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\BanQuanAo.cs",
+              "RelativeDocumentMoniker": "WebLaptop\\Models\\BanQuanAo.cs",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\BanQuanAo.cs",
+              "RelativeToolTip": "WebLaptop\\Models\\BanQuanAo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T15:09:58.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BanQuanAo.tt",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\BanQuanAo.tt",
+              "RelativeDocumentMoniker": "WebLaptop\\Models\\BanQuanAo.tt",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\BanQuanAo.tt",
+              "RelativeToolTip": "WebLaptop\\Models\\BanQuanAo.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-07-15T15:09:55.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WebLaptop.Designer.cs",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\WebLaptop.Designer.cs",
+              "RelativeDocumentMoniker": "WebLaptop\\Models\\WebLaptop.Designer.cs",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\WebLaptop.Designer.cs",
+              "RelativeToolTip": "WebLaptop\\Models\\WebLaptop.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T15:09:54.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BanQuanAo.Context.cs",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\BanQuanAo.Context.cs",
+              "RelativeDocumentMoniker": "WebLaptop\\Models\\BanQuanAo.Context.cs",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\BanQuanAo.Context.cs",
+              "RelativeToolTip": "WebLaptop\\Models\\BanQuanAo.Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T15:09:26.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WebLaptop.edmx [Diagram1]",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\WebLaptop.edmx",
+              "RelativeDocumentMoniker": "WebLaptop\\Models\\WebLaptop.edmx",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\WebLaptop.edmx [Diagram1]",
+              "RelativeToolTip": "WebLaptop\\Models\\WebLaptop.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-07-15T15:09:15.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Web.config",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Web.config",
+              "RelativeDocumentMoniker": "WebLaptop\\Web.config",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Web.config",
+              "RelativeToolTip": "WebLaptop\\Web.config",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADgAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-07-15T15:08:44.504Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+﻿@model IEnumerable<WebLaptop.Models.GioHang>
+@using WebLaptop.Models;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start Bradcaump area -->
+<div class="ht__bradcaump__area bg-image--4" style="background-image:url('https://truonggiang.vn/wp-content/uploads/2022/09/banner-laptop-sinh-vien-2048x943-1.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcaump__inner text-center">
+                    <h2 class="bradcaump-title">Tạo tài khoản</h2>
+                    <nav class="bradcaump-content">
+                        <a class="breadcrumb_item" href="@Url.Action("Index","Home")">Trang chủ</a>
+                        <span class="brd-separetor">/</span>
+                        <span class="breadcrumb_item active">Tạo tài khoản</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- Start Checkout Area -->
+<section class="wn__checkout__area section-padding--lg bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <form action="@Url.Action("CheckOutProduct", "GioHangs")" method="post">
+                    <div class="customer_details">
+                        <h3>Thông tin khách hàng</h3>
+                        @{ KhachHang kh = (KhachHang)Session["KhachHang"]; }
+                        <div class="customar__field">
+                            <div class="input_box">
+                                <label> Tên khách hàng <span>*</span></label>
+                                <input type="hidden" value="@kh.Ma" name="makh" required />
+                                <input type="text" value="@kh.Ten" name="tenkh" required>
+                            </div>
+                            <div class="input_box">
+                                <label>Địa chỉ <span>*</span></label>
+                                <input type="text" placeholder="Street address" value="@kh.DiaChi" id="diachi" name="diachi" required>
+                            </div>
+                            <div class="margin_between">
+                                <div class="input_box space_between">
+                                    <label>Số điện thoại <span>*</span></label>
+                                    <input type="text" value="@kh.DienThoai" name="SoDienThoai" required>
+                                </div>
+
+                                <div class="input_box space_between">
+                                    <label>Email  <span>*</span></label>
+                                    <input type="email" value="@kh.Email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <label>Giao tới địa chỉ khác <span>*</span></label>
+                                <input type="text" placeholder="Street address" value="@kh.DiaChi" name="diachigiaohang" required>
+                            </div>
+
+                            <div class="input_box">
+                                <label>Phương thức thanh toán <span>*</span></label>
+                                <select name="paymentMethod" required>
+                                    <option value="VNPay">VNPay</option>
+                                    <option value="COD">COD</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="create__account d-flex">
+                        <input class="input-checkbox btn btn-primary" style="width:100%;" value="Đặt hàng" type="submit">
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-lg-6 col-12 md-mt-40 sm-mt-40">
+                <div class="wn__order__box">
+                    <h3 class="onder__title">Đơn hàng của bạn</h3>
+                    <ul class="order__total">
+                        <li>Sản phẩm</li>
+                        <li>Tổng</li>
+                    </ul>
+                    <ul class="order_product">
+                        @foreach (var item in Model)
+                        {
+                            decimal gia = (decimal)item.sp.Gia;
+                            <li>@item.sp.Ten × @item.Soluong<span>@gia.ToString("##,#")</span></li>
+                        }
+                    </ul>
+                    <ul class="total__amount">
+                        @{ decimal tien = 0;}
+                        @foreach (var item in Model)
+                        {
+                            decimal tongtien = item.Soluong * (decimal)item.sp.Gia;
+                            tien = tien + tongtien;
+                        }
+                        <li>Tổng thanh toán <span>@tien.ToString("##,#")</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

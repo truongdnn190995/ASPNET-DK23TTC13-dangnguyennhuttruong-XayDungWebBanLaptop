@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebLaptop.Models.DonHang>
+@{
+    ViewBag.Title = "DanhSachDonHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="ht__bradcaump__area bg-image--4" style="background-image:url('https://truonggiang.vn/wp-content/uploads/2022/09/banner-laptop-sinh-vien-2048x943-1.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bradcaump__inner text-center">
+                    <h2 class="bradcaump-title">Danh sách đơn hàng</h2>
+                    <nav class="bradcaump-content">
+                        <a class="breadcrumb_item" href="@Url.Action("Index","Home")">Trang chủ</a>
+                        <span class="brd-separetor">/</span>
+                        <span class="breadcrumb_item active">Danh sách đơn hàng</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<!-- Start Checkout Area -->
+<section class="wn__checkout__area section-padding--lg bg__white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="table-content wnro__table table-responsive">
+                    <table>
+                        <thead>
+                            <tr class="title-top">
+                                <th class="product-thumbnail">Mã đơn hàng</th>
+                                <th class="product-name">Ngày đặt hàng</th>
+                                <th class="product-price">Tên người nhận</th>
+                                <th class="product-quantity">Địa chỉ giao hàng</th>
+                                <th class="product-subtotal">Trạng thái</th>
+                                <th class="product-remove">Xem chi tiết</th>
+                                <th class="product-remove">Xóa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="product-thumbnail">@item.Ma</td>
+                                    <td class="product-name">@item.NgayDatHang</td>
+                                    <td class="product-price">@item.TenNguoiNhan</td>
+                                    <td class="product-quantity">@item.DiaChi</td>
+                                    @if (item.TrangThai == false)
+                                    {
+                                        <td style="color:red;" class="product-subtotal">Chưa thanh toán</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td style="color:green;" class="product-subtotal">Đã thanh toán</td>
+
+                                    }
+                                    <td class="product-remove"><a href="@Url.Action("XemChiTietDonHang","Home" ,new { madh = item.Ma })"><i class="fa-regular fa-eye"></i></a></td>
+                                    @if (item.TrangThai == false)
+                                     {
+
+                                        <td class="product-remove" ></td>
+
+                                     }
+                                    else
+                                    {
+                                       <td class="product-remove"><a href="@Url.Action("XoaDonHang","Home" , new { madh = item.Ma })"><i class="fa-solid fa-trash-can"></i></a></td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
