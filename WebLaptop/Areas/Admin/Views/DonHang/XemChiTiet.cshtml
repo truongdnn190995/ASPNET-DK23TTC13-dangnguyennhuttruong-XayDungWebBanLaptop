@@ -1,0 +1,149 @@
+﻿@using WebLaptop.Models;
+@model IEnumerable<WebLaptop.Models.ChiTietDonHang>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="card-box mb-30">
+    <div class="pd-20">
+        <h4 class="text-blue h4">Chi tiết đơn hàng</h4>
+    </div>
+    <div class="pb-20">
+        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="dataTables_length" id="DataTables_Table_0_length">
+                        <label>
+                            Show <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="custom-select custom-select-sm form-control form-control-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="-1">All</option>
+                            </select> entries
+                        </label>
+                    </div>
+                </div><div class="col-sm-12 col-md-6">
+                    <div id="DataTables_Table_0_filter" class="dataTables_filter">
+                        <label>
+                            Search:
+                            <input type="search" class="form-control form-control-sm" placeholder="Search" aria-controls="DataTables_Table_0">
+                        </label>
+                    </div>
+                </div>
+            </div><div class="row">
+                <div class="col-sm-12">
+                    <table class="data-table table stripe hover nowrap dataTable no-footer dtr-inline" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                        <thead>
+                            <tr role="row">
+                                <th class="table-plus datatable-nosort sorting_asc" rowspan="1" colspan="1" aria-label="Name">Tên sản phẩm</th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending">Số lượng</th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending">Đơn giá</th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Tổng tiển</th>
+                                <th class="datatable-nosort sorting_disabled" rowspan="1" colspan="1" aria-label="Action">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{ decimal thanhtien = 0; }
+                            @foreach (var item in Model)
+                            {
+                                decimal tongtien = (decimal)item.DonGia * (decimal)item.SoLuong;
+                                thanhtien = thanhtien + tongtien;
+                                <tr role="row" class="odd">
+                                    <td class="table-plus sorting_1" tabindex="0">@item.SanPham.Ten</td>
+                                    <td>@item.SoLuong</td>
+                                    <td>@item.DonGia</td>
+                                    <td>@tongtien.ToString("##,#") </td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                                <i class="dw dw-more"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                                <a class="dropdown-item" href="@Url.Action("Details","SanPhams", new { id = item.SanPham.Ma })"><i class="dw dw-eye"></i> View</a>
+                                                <a class="dropdown-item" href="@Url.Action("Edit","SanPhams", new { id = item.SanPham.Ma })"><i class="dw dw-edit2"></i> Edit</a>
+                                                <a class="dropdown-item" href="@Url.Action("xoaChtdh","DonHang", new {ma = item.MaDH  , masp = item.SanPham.Ma })"><i class="dw dw-delete-3"></i> Delete</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="card-box mb-30">
+    <div class="invoice-box" style="margin-top:40px;">
+        <div class="invoice-header">
+            <div class="logo text-center">
+                <img src="vendors/images/deskapp-logo.png" alt="">
+            </div>
+        </div>
+        <h4 class="text-center mb-30 weight-600">INVOICE</h4>
+        <div class="row pb-30">
+            <div class="col-md-6">
+
+                <h5 class="mb-15">Tên khách hàng</h5>
+                <p class="font-14 mb-5">Email : <strong class="weight-600">@ViewBag.email</strong></p>
+                <p class="font-14 mb-5">Số điện thoại: <strong class="weight-600">@ViewBag.sdt</strong></p>
+            </div>
+            <div class="col-md-6">
+                <div class="text-right">
+                    <p class="font-14 mb-5">@ViewBag.tenkh</p>
+                    <p class="font-14 mb-5">Địa chỉ : @ViewBag.diachi</p>
+                    @if (ViewBag.TrangThai == false)
+                    {
+                        <h4 style="color:red;">Chưa thanh toán</h4>
+                    }
+                    else
+                    {
+                        <h4 style="color:green;">Đã thanh toán</h4>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="invoice-desc pb-30">
+            <div class="invoice-desc-head clearfix">
+                <div class="invoice-sub">Tên sản phẩm</div>
+                <div class="invoice-rate">Số lương</div>
+                <div class="invoice-hours">Giá</div>
+                <div class="invoice-subtotal">Tổng</div>
+            </div>
+            <div class="invoice-desc-body">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        decimal tongtien = (decimal)item.DonGia * (decimal)item.SoLuong;
+                        <li class="clearfix">
+                            <div class="invoice-sub">@item.SanPham.Ten</div>
+                            <div class="invoice-rate">@item.SoLuong</div>
+                            <div class="invoice-hours">@item.DonGia</div>
+                            <div class="invoice-subtotal"><span class="weight-600">@tongtien.ToString("##,#")</span></div>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="invoice-desc-footer">
+                <div class="invoice-desc-head clearfix">
+                    <div class="invoice-sub">Thanh toán</div>
+                    <div class="invoice-rate">Ngày mua hàng</div>
+                    <div class="invoice-subtotal">Tổng số tiền</div>
+                </div>
+                <div class="invoice-desc-body">
+                    <ul>
+                        <li class="clearfix">
+                            <div class="invoice-sub">
+                                <p class="font-14 mb-5"><strong class="weight-600">Thanh toán khi nhận hàng</strong></p>
+                            </div>
+                            <div class="invoice-rate font-20 weight-600">@ViewBag.ngaymua
+                            </div>
+                            <div class="invoice-subtotal"><span class="weight-600 font-24 text-danger">@thanhtien.ToString("##,#")</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+﻿@model IEnumerable<WebLaptop.Models.DonHang>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pd-ltr-20 xs-pd-20-10">
+    <div class="min-height-200px">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="title">
+                        <h4>Danh sách đơn hàng</h4>
+                    </div>
+                    <nav aria-label="breadcrumb" role="navigation">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index","Default")">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Danh sách đơn hàng</li>
+                        </ol>
+                    </nav>
+                </div>
+                
+            </div>
+        </div>
+        <!-- Simple Datatable start -->
+        <div class="card-box mb-30">
+            <div class="pd-20">
+                <h4 class="text-blue h4">Danh sách đơn hàng</h4>
+            </div>
+            <div class="pb-20">
+                <table class="data-table table stripe hover nowrap">
+                    <thead>
+                        <tr>
+                            <th class="table-plus datatable-nosort">Tên khách hàng</th>
+                            <th>Ngày đặt hàng</th>
+                            <th>Phí giao hàng</th>
+                            <th>Tên người nhận</th>
+                            <th>Địa chỉ </th>
+                            <th>Điện thoại</th>
+                            <th>Email</th>
+                            <th>Trang Thái</th>
+                            <th class="datatable-nosort">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="table-plus">@item.KhachHang.Ten</td>
+                                <td>@item.NgayDatHang</td>
+                                <td>@item.PhiGiao</td>
+                                <td>@item.TenNguoiNhan</td>
+                                <td>@item.DiaChi</td>
+                                <td>@item.DienThoai</td>
+                                <td>@item.Email</td>
+                                @if (item.TrangThai == false)
+                                {
+                                    <th style="color:red">Chưa thanh toán</th>
+                                }
+                                else
+                                {
+                                    <th style="color:green"> Đã thanh toán</th>
+                                }
+                                <td>
+                                    <div class="dropdown">
+                                        <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                            <i class="dw dw-more"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                            <a class="dropdown-item" href="@Url.Action("XemChiTiet","DonHang", new { ma = item.Ma })"><i class="dw dw-eye"></i> xem chi tiết đơn hàng</a>
+                                            <a class="dropdown-item" href="@Url.Action("DeleteConfirmed","DonHang", new { id = item.Ma })"><i class="dw dw-delete-3"></i> Delete</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

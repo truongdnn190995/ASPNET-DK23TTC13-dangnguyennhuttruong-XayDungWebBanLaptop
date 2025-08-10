@@ -1,0 +1,100 @@
+﻿@model WebLaptop.Models.SanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="pd-ltr-20 xs-pd-20-10">
+    <div class="min-height-200px">
+        <div class="card-box mb-30">
+            <div class="pd-20">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Tên
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Ten)
+                    </dd>
+
+                    <dt>
+                        Mô tả
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Mota)
+                    </dd>
+
+                    <dt>
+                        Hình ảnh
+                    </dt>
+
+                    <dd>
+                        <img src="@Model.Anh" width="300px" height="300px" />
+                    </dd>
+
+                    <dt>
+                        Chi tiết
+                    </dt>
+
+                    <dd>
+                        @Html.Raw(Model.Chitiet)
+                    </dd>
+
+                    <dt>
+                        Tiêu biểu
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.TieuBieu)
+                    </dd>
+
+                    <dt>
+                        Giá
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Gia)
+                    </dd>
+
+                    <dt>
+                        Loại sản phẩm
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.LoaiSP.Ten)
+                    </dd>
+                    <dt>
+                         Tác gia
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.ThuongHieu)
+                    </dd>
+                    <dt>
+                        Nhà sản xuất
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.NhaSanXuat)
+                    </dd>
+                    <dt>
+                        Năm sản xuất
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.NamSX)
+                    </dd>
+
+                </dl>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Ma }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+        </div>
+     </div>
+</div>
+   

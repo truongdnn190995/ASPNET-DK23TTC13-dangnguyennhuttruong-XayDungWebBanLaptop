@@ -1,0 +1,63 @@
+﻿@model WebLaptop.Models.PhieuNhap
+
+@{
+    ViewBag.Title = "Details Phieu Nhap";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Phieu Nhap Details</h2>
+
+<div class="pd-ltr-20 xs-pd-20-10">
+    <div class="min-height-200px">
+        <div class="card-box mb-30">
+            <div class="pd-20">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Mã Phiếu
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Id)
+                    </dd>
+                    <dt>
+                        Tên Nhà Cung Cấp
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.NhaCungCap)
+                    </dd>
+                    <dt>
+                        Ngày Nhập
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.NgayNhap)
+                    </dd>
+                    <!-- Additional fields can be added as necessary -->
+                </dl>
+
+                <h4>Chi Tiết Sản Phẩm</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Số Lượng</th>
+                            <th>Giá Nhập</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.PhieuNhapChiTiets)
+                        {
+                            <tr>
+                                <td>@item.SanPham.Ten</td>
+                                <td>@item.SoLuong</td>
+                                <td>@item.GiaNhap</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+                <p>
+                    @Html.ActionLink("Back to List", "Index", "PhieuNhap", null, new { @class = "btn btn-secondary" })
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

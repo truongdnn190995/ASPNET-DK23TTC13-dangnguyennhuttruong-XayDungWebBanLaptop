@@ -1,0 +1,36 @@
+﻿@model WebLaptop.Models.LoaiSP
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<div class="pd-ltr-20 xs-pd-20-10">
+    <div class="min-height-200px">
+        <div class="card-box mb-30">
+            <div class="pd-20">
+                <dl class="dl-horizontal">
+                    <dt>
+                        Tên Loại sản phẩm
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Ten)
+                    </dd>
+
+                    <dt>
+                        Mô tả
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.MoTa)
+                    </dd>
+                </dl>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Ma }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

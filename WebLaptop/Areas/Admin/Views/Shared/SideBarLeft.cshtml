@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "SideBarLeft";
+}
+<div class="brand-logo">
+    <a href="@Url.Action("Index","Default")">
+        <img src="~/Areas/Admin/Asset/vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
+        <img src="~/Areas/Admin/Asset/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
+    </a>
+    <div class="close-sidebar" data-toggle="left-sidebar-close">
+        <i class="ion-close-round"></i>
+    </div>
+</div>
+<div class="menu-block customscroll">
+    <div class="sidebar-menu">
+        <ul id="accordion-menu">
+            <li>
+                <a href="@Url.Action("Index","Default")" class="dropdown-toggle no-arrow">
+                    <span class="micon dw dw-calendar1"></span><span class="mtext">Home</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle">
+                    <span class=" micon icon-copy ti-archive"></span><span class="mtext">Loại sản phẩm</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="@Url.Action("Index","LoaiSPs")">Danh sách loại sản phẩm</a></li>
+                    <li><a href="@Url.Action("Create","LoaiSPs")">Thêm loại sản phẩm</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle">
+                    <span class="micon dw dw-library"></span><span class="mtext">Sản phẩm</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="@Url.Action("Index","SanPhams")">Danh sách sản phẩm</a></li>
+                    <li><a href="@Url.Action("Create","SanPhams")">Thêm sản phẩm</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle">
+                    <span class="micon dw dw-library"></span><span class="mtext">Tồn kho</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="@Url.Action("Index","PhieuNhap")">Nhập kho</a></li>
+                    <li><a href="@Url.Action("Index","PhieuXuat")">Xuất kho</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle">
+                    <span class="micon icon-copy ti-user"></span><span class="mtext">Người dùng</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="@Url.Action("Index","NguoiDungs")">Danh sách người dùng</a></li>
+                    <li><a href="@Url.Action("Create","NguoiDungs")">Thêm người dùng</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle">
+                    <span class="micon icon-copy dw dw-package"></span><span class="mtext">Đơn hàng</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="@Url.Action("DanhSachDonHang","DonHang")">Danh sách đơn hàng</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle">
+                    <span class="micon icon-copy ti-face-smile"></span><span class="mtext">Khách hàng</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="@Url.Action("Index","KhachHangs")">Danh sách khách hàng</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://localhost:44336/Home/Index" target="_blank" class="dropdown-toggle no-arrow">
+                    <span class="micon dw dw-paper-plane1"></span>
+                    <span class="mtext">Tới trang người dùng <img src="~/Areas/Asset/vendors/images/coming-soon.png" alt="" width="25"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

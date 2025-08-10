@@ -1,0 +1,151 @@
+﻿@model IEnumerable<WebLaptop.Models.SanPham>
+@using WebLaptop.Models
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<div class="pd-ltr-20">
+    <div class="card-box pd-20 height-100-p mb-30">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="~/Areas/Admin/Asset/vendors/images/banner-img.png" alt="">
+            </div>
+            @if (Session["nguoidung"] != null)
+            {
+                NguoiDung nd = (NguoiDung)Session["nguoidung"];
+
+
+                <div class="col-md-8">
+                    <h4 class="font-20 weight-500 mb-10 text-capitalize">
+                        Xin chào <div class="weight-600 font-30 text-blue">@nd.Ten</div>
+                    </h4>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-8 mb-30">
+            <div class="card-box height-100-p pd-20">
+                <h2 class="h4 mb-20">Customers per Month</h2>
+                <div id="chartCustomers"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-box mb-30">
+        <h2 class="h4 pd-20">Most Sold Products</h2>
+        <table class="data-table table nowrap">
+            <thead>
+                <tr>
+                    <th class="table-plus datatable-nosort">Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Số lượng bán</th>
+                    <th>Giá</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.MostSoldBooks as List<MostSoldBookViewModel>)
+                {
+                    <tr>
+                        <td class="table-plus">
+                            <img src="@item.Anh" width="70" height="70" alt="">
+                        </td>
+                        <td>
+                            <h5 class="font-16">@item.Ten</h5>
+                        </td>
+                        <td>@item.SoldQuantity</td>
+                        <td>@item.Gia</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+
+
+    <div class="card-box mb-30">
+        <h2 class="h4 pd-20">Best Selling Products</h2>
+        <table class="data-table table nowrap">
+            <thead>
+                <tr>
+                    <th class="table-plus datatable-nosort">Hình ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Nhà sản xuất</th>
+                    <th>Năm sản xuất</th>
+                    <th>Tác gia</th>
+                    <th>Giá</th>
+                    <th class="datatable-nosort">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="table-plus">
+                            <img src="@item.Anh" width="70" height="70" alt="">
+                        </td>
+                        <td>
+                            <h5 class="font-16">@item.Ten</h5>
+                        </td>
+                        <td>@item.NhaSanXuat</td>
+                        <td>@item.NamSX</td>
+                        <td>@item.ThuongHieu</td>
+                        <td>@item.Gia</td>
+                        <td>
+                            <div class="dropdown">
+                                <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                    <i class="dw dw-more"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                                    <a class="dropdown-item" href="@Url.Action("Details","SanPhams", new { id = item.Ma })"><i class="dw dw-eye"></i> View</a>
+                                    <a class="dropdown-item" href="@Url.Action("Edit","SanPhams", new { id = item.Ma })"><i class="dw dw-edit2"></i> Edit</a>
+                                    <a class="dropdown-item" href="@Url.Action("DeleteConfirmed","SanPhams", new { id = item.Ma })"><i class="dw dw-delete-3"></i> Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    var customersData = @Html.Raw(Json.Encode(ViewBag.CustomersPerMonth));
+
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var customerCounts = new Array(12).fill(0); 
+
+    customersData.forEach(function (item) {
+        customerCounts[item.Month - 1] = item.CustomerCount;
+    });
+
+    Highcharts.chart('chartCustomers', {
+        chart: {
+            type: 'column' 
+        },
+        title: {
+            text: 'Number of Customers per Month'
+        },
+        xAxis: {
+            categories: months,
+            title: {
+                text: 'Month'
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Number of Customers'
+            }
+        },
+        series: [{
+            name: 'Customers',
+            data: customerCounts
+        }]
+    });
+</script>

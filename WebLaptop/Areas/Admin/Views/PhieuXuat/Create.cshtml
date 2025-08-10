@@ -1,0 +1,106 @@
+﻿@model WebLaptop.Models.PhieuXuat
+
+@{
+    ViewBag.Title = "Create Phieu Xuat";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pd-ltr-20 xs-pd-20-10">
+    <div class="min-height-200px">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="title">
+                        <h4>Thêm Phiếu Xuất</h4>
+                    </div>
+                    <nav aria-label="breadcrumb" role="navigation">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index", "Default")">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Thêm Phiếu Xuất</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Begin Form -->
+        @using (Html.BeginForm("Create", "PhieuXuat", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <!-- Customer Name Input -->
+            <div class="form-group row">
+                <label class="col-sm-12 col-md-2 col-form-label">Tên Khách Hàng</label>
+                <div class="col-sm-12 col-md-10">
+                    <input class="form-control" type="text" name="TenKhachHang" required />
+                </div>
+            </div>
+
+            <!-- Add the Product Details -->
+            <h4>Chi Tiết Phiếu Xuất</h4>
+            <table class="table" id="tableDetails">
+                <thead>
+                    <tr>
+                        <th>Sản Phẩm</th>
+                        <th>Số Lượng</th>
+                        <th>Giá Xuất</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select name="chiTietPhieuXuat[0].SanPhamId" class="form-control">
+                                @foreach (var product in ViewBag.SanPhamList)
+                                {
+                                    <option value="@product.Ma">@product.Ten</option>
+                                }
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" name="chiTietPhieuXuat[0].SoLuong" class="form-control" />
+                        </td>
+                        <td>
+                            <input type="number" name="chiTietPhieuXuat[0].GiaXuat" class="form-control" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Add More Row Button (Optional) -->
+            <button type="button" class="btn btn-secondary" id="addRow">Thêm Sản Phẩm</button>
+
+            <div class="btn-list">
+                <button type="submit" class="btn btn-success btn-lg btn-block">Thêm</button>
+                <a href="@Url.Action("Index", "PhieuXuat")" class="btn btn-secondary btn-lg btn-block">Quay lại</a>
+            </div>
+        }
+        <!-- End Form -->
+    </div>
+</div>
+
+<script>
+    // Add New Row for More Product Details
+    let rowCount = 1;
+    document.getElementById('addRow').onclick = function() {
+        const table = document.getElementById('tableDetails').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+
+        newRow.innerHTML = `
+            <td>
+                <select name="chiTietPhieuXuat[${rowCount}].SanPhamId" class="form-control">
+                    @foreach (var product in ViewBag.SanPhamList)
+                    {
+                        <option value="@product.Ma">@product.Ten</option>
+                    }
+                </select>
+            </td>
+            <td>
+                <input type="number" name="chiTietPhieuXuat[${rowCount}].SoLuong" class="form-control" />
+            </td>
+            <td>
+                <input type="number" name="chiTietPhieuXuat[${rowCount}].GiaXuat" class="form-control" />
+            </td>
+        `;
+        rowCount++;
+    };
+</script>

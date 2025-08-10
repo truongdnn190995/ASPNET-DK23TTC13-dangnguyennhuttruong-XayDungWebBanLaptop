@@ -1,0 +1,119 @@
+﻿@model WebLaptop.Models.PhieuNhap
+
+@{
+    ViewBag.Title = "Create Phieu Nhap";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pd-ltr-20 xs-pd-20-10">
+    <div class="min-height-200px">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="title">
+                        <h4>Thêm Phiếu Nhập</h4>
+                    </div>
+                    <nav aria-label="breadcrumb" role="navigation">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="@Url.Action("Index", "Default")">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Thêm Phiếu Nhập</li>
+                        </ol>
+                    </nav>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Default Basic Forms Start -->
+        <div class="pd-20 card-box mb-30">
+            <div class="clearfix">
+                <div class="pull-left">
+                    <h4 class="text-blue h4">Thêm Phiếu Nhập</h4>
+                </div>
+                <div class="pull-right">
+                    <a href="#basic-form1" class="btn btn-primary btn-sm scroll-click" rel="content-y" data-toggle="collapse" role="button"></a>
+                </div>
+            </div>
+
+            <!-- Begin Form -->
+            @using (Html.BeginForm("Create", "PhieuNhap", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <!-- Khách Hàng Name Input -->
+                <div class="form-group row">
+                    <label class="col-sm-12 col-md-2 col-form-label">Tên Khách Hàng</label>
+                    <div class="col-sm-12 col-md-10">
+                        <input class="form-control" type="text" name="TenKhachHang" required />
+                    </div>
+                </div>
+
+                <!-- Add the Product Details -->
+                <h4>Chi Tiết Phiếu Nhập</h4>
+                <table class="table" id="tableDetails">
+                    <thead>
+                        <tr>
+                            <th>Sản Phẩm</th>
+                            <th>Số Lượng</th>
+                            <th>Giá Nhập</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <select name="chiTietPhieuNhap[0].SanPhamId" class="form-control">
+                                    @foreach (var product in ViewBag.SanPhamList)
+                                    {
+                                        <option value="@product.Ma">@product.Ten</option>
+                                    }
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" name="chiTietPhieuNhap[0].SoLuong" class="form-control" />
+                            </td>
+                            <td>
+                                <input type="number" name="chiTietPhieuNhap[0].GiaNhap" class="form-control" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Add More Row Button (Optional) -->
+                <button type="button" class="btn btn-secondary" id="addRow">Thêm Sản Phẩm</button>
+
+                <div class="btn-list">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Thêm</button>
+                    <a href="@Url.Action("Index", "PhieuNhap")" class="btn btn-secondary btn-lg btn-block">Quay lại</a>
+                </div>
+            }
+            <!-- End Form -->
+        </div>
+    </div>
+</div>
+
+<script>
+    // Add New Row for More Product Details
+    let rowCount = 1;
+    document.getElementById('addRow').onclick = function() {
+        const table = document.getElementById('tableDetails').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+
+        newRow.innerHTML = `
+            <td>
+                <select name="chiTietPhieuNhap[${rowCount}].SanPhamId" class="form-control">
+                    @foreach (var product in ViewBag.SanPhamList)
+                    {
+                        <option value="@product.Ma">@product.Ten</option>
+                    }
+                </select>
+            </td>
+            <td>
+                <input type="number" name="chiTietPhieuNhap[${rowCount}].SoLuong" class="form-control" />
+            </td>
+            <td>
+                <input type="number" name="chiTietPhieuNhap[${rowCount}].GiaNhap" class="form-control" />
+            </td>
+        `;
+        rowCount++;
+    };
+</script>

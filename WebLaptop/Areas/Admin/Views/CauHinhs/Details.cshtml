@@ -1,0 +1,91 @@
+﻿@model WebLaptop.Models.CauHinh
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CauHinh</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Logo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CongTy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CongTy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDienThoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDienThoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Banner1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Banner1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Banner2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Banner2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Banner3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Banner3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Banner4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Banner4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Ma }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
