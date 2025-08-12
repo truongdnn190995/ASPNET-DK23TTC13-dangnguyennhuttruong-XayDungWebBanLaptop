@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|e:\\quanlybansach\\quanlybansach\\quanlysach\\lap\\banquanao\\weblaptop\\weblaptop\\areas\\admin\\controllers\\cauhinhscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|solutionrelative:weblaptop\\areas\\admin\\controllers\\cauhinhscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|e:\\quanlybansach\\quanlybansach\\quanlysach\\lap\\banquanao\\weblaptop\\weblaptop\\areas\\admin\\adminarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|solutionrelative:weblaptop\\areas\\admin\\adminarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|e:\\quanlybansach\\quanlybansach\\quanlysach\\lap\\banquanao\\weblaptop\\weblaptop\\views\\home\\banner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\views\\home\\banner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|solutionrelative:weblaptop\\views\\home\\banner.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -67,6 +71,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CauHinhsController.cs",
+              "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Areas\\Admin\\Controllers\\CauHinhsController.cs",
+              "RelativeDocumentMoniker": "WebLaptop\\Areas\\Admin\\Controllers\\CauHinhsController.cs",
+              "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Areas\\Admin\\Controllers\\CauHinhsController.cs",
+              "RelativeToolTip": "WebLaptop\\Areas\\Admin\\Controllers\\CauHinhsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T02:24:18.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AdminAreaRegistration.cs",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Areas\\Admin\\AdminAreaRegistration.cs",
               "RelativeDocumentMoniker": "WebLaptop\\Areas\\Admin\\AdminAreaRegistration.cs",
@@ -79,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Banner.cshtml",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Home\\Banner.cshtml",
               "RelativeDocumentMoniker": "WebLaptop\\Views\\Home\\Banner.cshtml",
@@ -87,12 +104,11 @@
               "RelativeToolTip": "WebLaptop\\Views\\Home\\Banner.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-07T09:27:00.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-07T09:27:00.114Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Banner.cshtml",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Home\\Banner.cshtml",
               "RelativeDocumentMoniker": "WebLaptop\\Views\\Home\\Banner.cshtml",
@@ -104,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CheckOut.cshtml",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\GioHangs\\CheckOut.cshtml",
               "RelativeDocumentMoniker": "WebLaptop\\Views\\GioHangs\\CheckOut.cshtml",
@@ -116,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "WebLaptop\\Views\\Shared\\_Layout.cshtml",
@@ -128,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Header.cshtml",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Views\\Shared\\Header.cshtml",
               "RelativeDocumentMoniker": "WebLaptop\\Views\\Shared\\Header.cshtml",
@@ -140,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "DonHang.cs",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\DonHang.cs",
               "RelativeDocumentMoniker": "WebLaptop\\Models\\DonHang.cs",
@@ -152,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BanQuanAo.cs",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\BanQuanAo.cs",
               "RelativeDocumentMoniker": "WebLaptop\\Models\\BanQuanAo.cs",
@@ -164,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "BanQuanAo.tt",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\BanQuanAo.tt",
               "RelativeDocumentMoniker": "WebLaptop\\Models\\BanQuanAo.tt",
@@ -176,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "WebLaptop.Designer.cs",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\WebLaptop.Designer.cs",
               "RelativeDocumentMoniker": "WebLaptop\\Models\\WebLaptop.Designer.cs",
@@ -188,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "BanQuanAo.Context.cs",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\BanQuanAo.Context.cs",
               "RelativeDocumentMoniker": "WebLaptop\\Models\\BanQuanAo.Context.cs",
@@ -200,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "WebLaptop.edmx [Diagram1]",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Models\\WebLaptop.edmx",
               "RelativeDocumentMoniker": "WebLaptop\\Models\\WebLaptop.edmx",
@@ -211,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Web.config",
               "DocumentMoniker": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Web.config",
               "RelativeDocumentMoniker": "WebLaptop\\Web.config",
