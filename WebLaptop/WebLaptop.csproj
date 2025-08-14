@@ -149,6 +149,10 @@
     <Compile Include="Areas\Admin\Controllers\PhieuNhapController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhieuXuatController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoaiSPController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Controllers\SinglePageController.cs" />
     <Compile Include="Models\BanQuanAo.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
