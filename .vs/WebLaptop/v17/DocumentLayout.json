@@ -7,19 +7,19 @@
       "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|solutionrelative:weblaptop\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|e:\\quanlybansach\\quanlybansach\\quanlysach\\lap\\banquanao\\weblaptop\\weblaptop\\controllers\\loaispcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\controllers\\loaispcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|solutionrelative:weblaptop\\controllers\\loaispcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|e:\\quanlybansach\\quanlybansach\\quanlysach\\lap\\banquanao\\weblaptop\\weblaptop\\controllers\\singlepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\controllers\\singlepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|solutionrelative:weblaptop\\controllers\\singlepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|e:\\quanlybansach\\quanlybansach\\quanlysach\\lap\\banquanao\\weblaptop\\weblaptop\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|solutionrelative:weblaptop\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|e:\\quanlybansach\\quanlybansach\\quanlysach\\lap\\banquanao\\weblaptop\\weblaptop\\areas\\admin\\controllers\\cauhinhscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\weblaptop\\areas\\admin\\controllers\\cauhinhscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9896E4DB-E725-4C1F-8989-73C574496043}|WebLaptop\\WebLaptop.csproj|solutionrelative:weblaptop\\areas\\admin\\controllers\\cauhinhscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -92,7 +92,7 @@
               "RelativeDocumentMoniker": "WebLaptop\\Controllers\\HomeController.cs",
               "ToolTip": "E:\\QuanLyBanSach\\QuanLyBanSach\\QuanLySach\\lap\\BanQuanAo\\WebLaptop\\WebLaptop\\Controllers\\HomeController.cs",
               "RelativeToolTip": "WebLaptop\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKIAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAJgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-14T07:13:50.571Z",
               "EditorCaption": ""
@@ -107,8 +107,7 @@
               "RelativeToolTip": "WebLaptop\\Controllers\\LoaiSPController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T07:13:49.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T07:13:49.367Z"
             },
             {
               "$type": "Document",
@@ -120,8 +119,7 @@
               "RelativeToolTip": "WebLaptop\\Controllers\\ShopController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T07:13:47.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T07:13:47.122Z"
             },
             {
               "$type": "Document",
@@ -133,8 +131,7 @@
               "RelativeToolTip": "WebLaptop\\Controllers\\SinglePageController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T07:13:37.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-14T07:13:37.505Z"
             },
             {
               "$type": "Document",
@@ -146,8 +143,7 @@
               "RelativeToolTip": "WebLaptop\\Areas\\Admin\\Controllers\\CauHinhsController.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-12T02:24:18.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-12T02:24:18.153Z"
             },
             {
               "$type": "Document",
